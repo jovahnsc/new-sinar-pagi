@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         primary: "#F8F3E9",
         dark: "#0f172a",
+        aspectRatio: {
+          "9/16": "9 / 16",
+        },
       },
       screens: {
         "2xl": "1320px",
