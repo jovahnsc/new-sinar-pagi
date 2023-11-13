@@ -82,7 +82,7 @@
     <section id="home" class="pt-36 pb-32">
       <div class="container">
         <div
-          class="flex flex-col-reverse items-center gap-4 lg:flex-row lg:gap-0 flex-wrap lg:justify-center"
+          class="flex flex-col-reverse items-center gap-4 lg:flex-row lg:gap-0 lg:justify-center"
         >
           <div
             class="flex flex-col items-center w-full px-4 lg:place-items-start lg:w-1/2 text-center lg:text-left"
@@ -128,28 +128,30 @@
           </div>
         </div>
 
-        <div class="flex items-center justify-center mb-14 px-4 lg:gap-4">
+        <div class="flex items-center justify-center mb-14 px-4 md:gap-2">
           <div
-            class="hidden lg:flex lg:flex-wrap lg:flex-col lg:gap-4 lg:w-1/2 content-end lg:py-2"
+            class="hidden md:flex md:flex-wrap md:flex-col md:w-2/5 md:gap-2 md:content-end"
           >
             <img
               src="https://source.unsplash.com/640x640?necklace"
               alt=""
-              class="aspect-square w-1/3 object-cover rounded-lg"
+              class="aspect-square md:w-[10.625rem] lg:w-[14.75rem] object-cover rounded-lg"
               loading="lazy"
             />
             <img
               src="https://source.unsplash.com/640x640?bracelet"
               alt=""
-              class="aspect-square w-1/3 object-cover rounded-lg"
+              class="aspect-square md:w-[10.625rem] lg:w-[14.75rem] object-cover rounded-lg"
               loading="lazy"
             />
           </div>
-          <div class="lg:w-1/2">
+          <div
+            class="flex justify-center overflow-hidden md:justify-start w-full md:w-3/5"
+          >
             <img
               src="https://source.unsplash.com/640x640?ring"
               alt=""
-              class="aspect-square w-[20rem] object-cover rounded-lg lg:h-full"
+              class="aspect-square w-[20rem] object-cover rounded-lg md:w-[21.75rem] lg:w-[30rem]"
               loading="lazy"
             />
           </div>
@@ -163,45 +165,50 @@
       <div class="container">
         <div class="flex flex-col items-center px-4 lg:flex-row">
           <div
-            class="flex flex-col text-center lg:text-left rounded-lg lg:w-1/3"
+            class="flex flex-col items-center text-center lg:text-left rounded-lg lg:w-1/3 lg:justify-items-start"
           >
-            <h1 class="mb-2 font-bold text-3xl text-dark">
+            <h1 class="mb-2 font-bold text-3xl text-dark lg:mb-6">
               Best Seller Product
             </h1>
-            <p class="mb-6 font-light text-dark">
+            <p class="mb-6 font-light text-dark lg:mb-12">
               Transform your jewelry collection with our Fairy Box trinkets, a
               collection of hand-carved natural stone charms that you can add on
               to bracelets, necklaces, hoops, and more.
             </p>
+            <a
+              href="#"
+              class="hidden lg:block text-base font-medium text-dark bg-primary py-4 px-8 rounded outline outline-1 outline-dark hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              >See More</a
+            >
           </div>
-          <div class="flex justify-center mb-2 gap-4 lg:w-2/3">
+          <div class="flex justify-center items-center mb-2 gap-4 lg:w-2/3">
+            <div class="flex flex-col overflow-hidden">
+              <img
+                src="https://source.unsplash.com/640x640?bee"
+                alt=""
+                class="w-[15rem] h-[22.5rem] object-cover rounded-lg mb-4 opacity-40"
+                loading="lazy"
+              />
+              <h5 class="font-medium text-center leading-relaxed">
+                Rose D'Amour
+              </h5>
+            </div>
             <div class="flex flex-col">
               <img
                 src="https://source.unsplash.com/640x640?flower"
                 alt=""
-                class="w-[15rem] h-[22.5rem] object-cover rounded-lg mb-4"
+                class="w-[15rem] h-[22.5rem] lg:w-[20rem] lg:h-[30rem] object-cover rounded-lg mb-4"
                 loading="lazy"
               />
               <h5 class="font-medium text-center leading-relaxed">
                 Rose D'Amour
               </h5>
             </div>
-            <div class="hidden">
+            <div class="flex flex-col overflow-hidden">
               <img
-                src="https://source.unsplash.com/640x640?flower"
+                src="https://source.unsplash.com/640x640?tree"
                 alt=""
-                class="w-[20rem] h-[30rem] object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
-              <h5 class="font-medium text-center leading-relaxed">
-                Rose D'Amour
-              </h5>
-            </div>
-            <div class="hidden">
-              <img
-                src="https://source.unsplash.com/640x640?flower"
-                alt=""
-                class="w-[20rem] h-[30rem] object-cover rounded-lg mb-4"
+                class="w-[15rem] h-[22.5rem] object-cover rounded-lg mb-4 opacity-40"
                 loading="lazy"
               />
               <h5 class="font-medium text-center leading-relaxed">
@@ -220,7 +227,7 @@
         <div class="w-full">
           <div class="mx-auto mb-10 text-center">
             <h2
-              class="mb-4 text-4xl font-bold text-dark sm:text-4xl lg:text-5xl"
+              class="mb-4 text-2xl font-bold text-dark sm:text-4xl lg:text-3xl"
             >
               Shop By Category
             </h2>
@@ -228,112 +235,88 @@
         </div>
 
         <div
-          class="flex flex-wrap gap-3 mb-10 justify-center content-evenly md:gap-6 md:content-center lg:gap-12"
+          class="flex flex-wrap gap-3 mb-10 justify-center content-evenly md:gap-6 md:content-center lg:gap-6 lg:px-12 xl:px-52"
         >
-          <a href="">
+          <a class="relative aspect-square w-40 md:w-52 xl:w-64" href="">
             <div
-              class="relative aspect-square h-40 w-40 bg-clip-border lg:h-72 lg:w-72"
+              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?programming')]"
             >
-              <div
-                class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?programming')]"
-              >
-                <div class="absolute bottom-4 inset-x-0 px-6">
-                  <h3
-                    class="block text-md font-semibold text-white text-center antialiased"
-                  >
-                    Programming
-                  </h3>
-                </div>
+              <div class="absolute bottom-4 inset-x-0 px-6">
+                <h3
+                  class="block text-md font-semibold text-white text-center antialiased"
+                >
+                  Programming
+                </h3>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a class="relative aspect-square w-40 md:w-52 xl:w-64" href="">
             <div
-              class="relative aspect-square h-40 w-40 bg-clip-border lg:h-72 lg:w-72"
+              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?mechanical+keyboard')]"
             >
-              <div
-                class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?mechanical+keyboard')]"
-              >
-                <div class="absolute bottom-4 inset-x-0 px-6">
-                  <h3
-                    class="block text-md font-semibold text-white text-center antialiased"
-                  >
-                    Keyboard
-                  </h3>
-                </div>
+              <div class="absolute bottom-4 inset-x-0 px-6">
+                <h3
+                  class="block text-md font-semibold text-white text-center antialiased"
+                >
+                  Keyboard
+                </h3>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a class="relative aspect-square w-40 md:w-52 xl:w-64" href="">
             <div
-              class="relative aspect-square h-40 w-40 bg-clip-border lg:h-72 lg:w-72"
+              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?coffee')]"
             >
-              <div
-                class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?coffee')]"
-              >
-                <div class="absolute bottom-4 inset-x-0 px-6">
-                  <h3
-                    class="block text-md font-semibold text-white text-center antialiased"
-                  >
-                    Coffee
-                  </h3>
-                </div>
+              <div class="absolute bottom-4 inset-x-0 px-6">
+                <h3
+                  class="block text-md font-semibold text-white text-center antialiased"
+                >
+                  Coffee
+                </h3>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a class="relative aspect-square w-40 md:w-52 xl:w-64" href="">
             <div
-              class="relative aspect-square h-40 w-40 bg-clip-border lg:h-72 lg:w-72"
+              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?camera')]"
             >
-              <div
-                class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?camera')]"
-              >
-                <div class="absolute bottom-4 inset-x-0 px-6">
-                  <h3
-                    class="block text-md font-semibold text-white text-center antialiased"
-                  >
-                    Camera
-                  </h3>
-                </div>
+              <div class="absolute bottom-4 inset-x-0 px-6">
+                <h3
+                  class="block text-md font-semibold text-white text-center antialiased"
+                >
+                  Camera
+                </h3>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a class="relative aspect-square w-40 md:w-52 xl:w-64" href="">
             <div
-              class="relative aspect-square h-40 w-40 bg-clip-border lg:h-72 lg:w-72"
+              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?photography')]"
             >
-              <div
-                class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?photography')]"
-              >
-                <div class="absolute bottom-4 inset-x-0 px-6">
-                  <h3
-                    class="block text-md font-semibold text-white text-center antialiased"
-                  >
-                    Photography
-                  </h3>
-                </div>
+              <div class="absolute bottom-4 inset-x-0 px-6">
+                <h3
+                  class="block text-md font-semibold text-white text-center antialiased"
+                >
+                  Photography
+                </h3>
               </div>
             </div>
           </a>
 
-          <a href="">
+          <a class="relative aspect-square w-40 md:w-52 xl:w-64" href="">
             <div
-              class="relative aspect-square h-40 w-40 bg-clip-border lg:h-72 lg:w-72"
+              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?tea')]"
             >
-              <div
-                class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?tea')]"
-              >
-                <div class="absolute bottom-4 inset-x-0 px-6">
-                  <h3
-                    class="block text-md font-semibold text-white text-center antialiased"
-                  >
-                    Tea
-                  </h3>
-                </div>
+              <div class="absolute bottom-4 inset-x-0 px-6">
+                <h3
+                  class="block text-md font-semibold text-white text-center antialiased"
+                >
+                  Tea
+                </h3>
               </div>
             </div>
           </a>
@@ -421,7 +404,7 @@
                 </svg>
               </div>
               <p class="text-md font-thin text-secondary md:text-lg">
-                <span>1791</span> Five Star Reviews
+                <span>1791+</span> Reviews
               </p>
             </div>
           </div>
@@ -429,54 +412,52 @@
           <div class="w-full px-4">
             <div class="mx-auto mb-10 text-center">
               <h2
-                class="mb-4 text-3xl font-bold text-dark dark:text-dark sm:text-4xl lg:text-5xl"
+                class="mb-4 text-2xl font-bold text-dark dark:text-dark sm:text-4xl lg:text-3xl"
               >
                 Here's what people are saying about us
               </h2>
             </div>
           </div>
 
-          <div class="">
-            <div class="w-full px-4">
-              <div class="flex mx-auto mb-4 bg-cover justify-center">
-                <img
-                  src="https://source.unsplash.com/960x960?programming"
-                  alt=""
-                  class="rounded-xl shadow-lg w-[30rem]"
-                />
-              </div>
+          <div class="flex flex-col justify-center md:flex-row-reverse">
+            <div class="mx-auto mb-4 bg-cover md:w-1/2">
+              <img
+                src="https://source.unsplash.com/960x960?programming"
+                alt=""
+                class="rounded-xl shadow-lg w-[20rem]"
+              />
             </div>
 
-            <div class="w-full px-4">
-              <div class="mx-auto mb-16 text-center">
-                <h2
-                  class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
+            <div
+              class="w-full px-4 mx-auto mb-16 text-center md:w-1/2 md:flex md:flex-wrap md:flex-col md:justify-center md:text-left"
+            >
+              <h2
+                class="mb-4 text-xl font-bold text-dark sm:text-4xl md:text-2xl"
+              >
+                Best Produk!
+              </h2>
+              <blockquote>
+                <p class="mb-2 text-lg font-semibold text-slate-600">
+                  "Very beautiful ring! My daily wear."
+                </p>
+              </blockquote>
+              <figcaption
+                class="flex flex-row justify-center mt-6 space-x-3 md:justify-start"
+              >
+                <img
+                  class="w-6 h-6 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="profile picture"
+                />
+                <div
+                  class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
                 >
-                  Best Produk!
-                </h2>
-                <blockquote>
-                  <p class="mb-2 text-lg font-semibold text-slate-600">
-                    "Very beautiful ring! My daily wear."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex items-center justify-center mt-6 space-x-3"
-                >
-                  <img
-                    class="w-6 h-6 rounded-full"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div
-                    class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
-                  >
-                    <div class="pr-3 font-medium text-gray-900">Jovahn</div>
-                    <div class="pl-3 text-sm font-light text-gray-500">
-                      Loyal Customer
-                    </div>
+                  <div class="pr-3 font-medium text-gray-900">Jovahn</div>
+                  <div class="pl-3 text-sm font-light text-gray-500">
+                    Loyal Customer
                   </div>
-                </figcaption>
-              </div>
+                </div>
+              </figcaption>
             </div>
           </div>
         </div>
@@ -488,9 +469,9 @@
     <section id="" class="py-20">
       <div class="container">
         <div
-          class="flex flex-wrap gap-4 justify-center content-evenly md:gap-6 md:content-center lg:gap-12"
+          class="flex flex-wrap gap-4 justify-center content-evenly md:gap-6 md:content-center lg:px-14"
         >
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div class="absolute w-full h-full rounded-xl">
               <div class="absolute bottom-10 inset-x-0 px-4">
                 <h3
@@ -502,46 +483,39 @@
               </div>
             </div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?ring')]"
             ></div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?necklace')]"
             ></div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?bangel')]"
             ></div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?earrings')]"
             ></div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?bracelet')]"
             ></div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?jewellry')]"
             ></div>
           </div>
-          <div class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72">
+          <div class="relative aspect-square w-40 xl:w-64">
             <div
               class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?gold+ring')]"
-            ></div>
-          </div>
-          <div
-            class="relative aspect-square h-40 w-40 lg:h-72 lg:w-72 hidden lg:hidden"
-          >
-            <div
-              class="absolute w-full h-full rounded-xl shadow-lg bg-cover bg-center bg-[url('https://source.unsplash.com/640x640?silver+ring')]"
             ></div>
           </div>
         </div>
@@ -550,41 +524,34 @@
     <!-- Instagram Section End -->
 
     <!-- About Section Start -->
-    <section id="" class="py-14">
+    <section id="" class="py-28 border-t-2 border-slate-200">
       <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-10 text-center">
-            <h2
-              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
-            >
-              Here's what people are saying about us
-            </h2>
-          </div>
-        </div>
-
         <div class="flex flex-wrap w-full px-4 justify-center lg:gap-6">
-          <div class="mb-8 bg-cover">
+          <div class="lg:px-4 mb-8 bg-cover">
             <img
               src="https://source.unsplash.com/960x960?programming"
               alt=""
               class="rounded-xl shadow-lg w-[25rem]"
             />
           </div>
-          <div class="flex flex-col mb-4 w-[25rem] items-center self-center">
+          <div
+            class="flex flex-col mb-4 lg:px-4 w-[25rem] items-center self-center lg:place-items-start"
+          >
             <h2
-              class="mb-4 text-lg font-bold text-dark text-center sm:text-2xl"
+              class="mb-4 text-xl font-bold text-dark text-center lg:text-2xl lg:mb-8"
             >
               Handcrafted in Singkawang
             </h2>
-            <p class="mb-10 text-md font-normal text-dark text-justify">
+            <p class="mb-10 font-normal text-dark text-justify lg:mb-12">
               Our highly skilled artisans exceed industry standards with
               sparkling GIA-graded natural diamonds, the finest-quality
               materials and outstanding engagement ring design at an amazing
-              value.
+              value. Our highly skilled artisans exceed industry standards with
+              sparkling GIA-graded natural diamonds.
             </p>
             <a
               href="#"
-              class="block w-fit text-base font-medium text-dark bg-primary py-3 px-8 rounded outline outline-1 outline-dark hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out lg:place-self-start"
+              class="block w-fit text-base font-medium text-dark bg-primary py-3 px-8 rounded outline outline-1 outline-dark hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
               >About Sinar Pagi</a
             >
           </div>
@@ -597,14 +564,14 @@
     <footer class="pt-24 pb-12 bg-amber-900">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/4">
             <h2 class="mb-5 text-4xl font-bold text-white">Sinar Pagi</h2>
             <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
             <p>sinarpagi@gmail.com</p>
             <p>Jl. Setia Budi, No.152</p>
             <p>Singkawang</p>
           </div>
-          <div class="mb-12 w-full px-4 md:w-1/3">
+          <div class="mb-12 w-full px-4 md:w-1/4">
             <h3 class="mb-5 text-xl font-semibold text-white">
               Kategori Tulisan
             </h3>
@@ -632,7 +599,54 @@
               </li>
             </ul>
           </div>
-          <div class="mb-12 w-full px-4 md:w-1/3">
+          <div class="mb-12 w-full px-4 md:w-1/4">
+            <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#home"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Tentang Saya</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#clients"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Clients</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/4">
             <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
             <ul class="text-slate-300">
               <li>
