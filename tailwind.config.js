@@ -14,13 +14,19 @@ module.exports = {
           "9/16": "9 / 16",
         },
       },
+      animation: {
+        "bounce-slow": "bounce 4s linear infinite",
+      },
       screens: {
         "2xl": "1320px",
       },
       backgroundImage: {
         hero: "url('img/hero.png')",
       },
+      boxShadow: {
+        xs: "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
+      },
     },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 };
