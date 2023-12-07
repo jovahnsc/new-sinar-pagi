@@ -20,7 +20,7 @@
   >
     <!-- Header Start -->
     <header
-      class="fixed left-0 top-0 z-10 flex w-full items-center bg-white bg-opacity-70 backdrop-blur-sm"
+      class="fixed left-0 top-0 z-[9999] flex w-full items-center bg-white bg-opacity-70 backdrop-blur-sm"
     >
       <div class="container">
         <div class="flex items-center justify-between">
@@ -50,14 +50,14 @@
 
             <nav
               id="nav-menu"
-              class="fixed bottom-0 left-0 right-0 top-0 transition-all"
-              :class="openMenu ? 'visible translate-x-0' : 'invisible translate-x-full'"
+              class="fixed bottom-0 left-0 right-0 top-0 transition-all lg:static lg:block"
+              :class="openMenu ? 'visible translate-x-0' : 'invisible translate-x-full lg:visible lg:translate-x-0'"
               x-cloak
             >
               <!-- fixed right-4 top-full hidden w-full max-w-[250px] bg-white shadow-md transition duration-500 ease-in-out translate-x-full transform lg:static lg:block lg:max-w-full lg:bg-transparent lg:shadow-none lg:transition-none lg:translate-x-0 -->
               <!-- absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent -->
               <ul
-                class="absolute bottom-0 right-0 top-0 block h-screen w-10/12 bg-white py-16 lg:flex"
+                class="absolute bottom-0 right-0 top-0 block h-screen w-10/12 bg-white py-16 lg:static lg:flex lg:h-fit lg:bg-inherit lg:py-0"
               >
                 <li class="group">
                   <a
@@ -156,7 +156,7 @@
               loading="lazy"
             />
             <img
-              src="https://source.unsplash.com/640x640?bracelet"
+              src="https://source.unsplash.com/640x640?earrings"
               alt=""
               class="aspect-square rounded-lg object-cover md:w-[10.625rem] lg:w-[14.75rem]"
               loading="lazy"
@@ -208,10 +208,10 @@
                 <img
                   class="h-[15rem] w-full object-cover lg:h-[16.5rem]"
                   alt=""
-                  src="https://source.unsplash.com/640x640?bee"
+                  src="https://source.unsplash.com/640x640?bracelet"
                 />
                 <div class="px-6 py-3">
-                  <h2 class="text-lg font-semibold">Mountain</h2>
+                  <h2 class="text-lg font-semibold">Package A</h2>
                 </div>
               </div>
               <div
@@ -220,10 +220,10 @@
                 <img
                   class="h-[19.5rem] w-full object-cover lg:h-[21rem]"
                   alt=""
-                  src="https://source.unsplash.com/640x640?tree"
+                  src="https://source.unsplash.com/640x640?gold"
                 />
                 <div class="px-6 py-3">
-                  <h2 class="text-lg font-semibold">Mountain</h2>
+                  <h2 class="text-lg font-semibold">Package B</h2>
                 </div>
               </div>
               <div
@@ -232,10 +232,10 @@
                 <img
                   class="h-[15rem] w-full object-cover lg:h-[16.5rem]"
                   alt=""
-                  src="https://source.unsplash.com/640x640?flower"
+                  src="https://source.unsplash.com/640x640?silver"
                 />
                 <div class="px-6 py-3">
-                  <h2 class="text-lg font-semibold">Mountain</h2>
+                  <h2 class="text-lg font-semibold">Package C</h2>
                 </div>
               </div>
             </div>
@@ -446,7 +446,7 @@
           <div class="flex flex-col justify-center md:flex-row-reverse">
             <div class="mx-auto mb-4 bg-cover md:w-1/2">
               <img
-                src="https://source.unsplash.com/960x960?programming"
+                src="https://source.unsplash.com/960x960?ring"
                 alt=""
                 class="w-[20rem] rounded-xl shadow-lg"
               />
@@ -555,7 +555,7 @@
         >
           <div class="mb-8 bg-cover lg:px-4">
             <img
-              src="https://source.unsplash.com/960x960?programming"
+              src="https://source.unsplash.com/960x960?jewelry"
               alt=""
               class="w-[25rem] rounded-xl shadow-lg"
             />
