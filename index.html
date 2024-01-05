@@ -13,9 +13,11 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
     ></script>
+    <script src="src/app.js"></script>
   </head>
   <body
     x-data="{openMenu : false}"
+    x-data="{showCard : 2}"
     :class="openMenu ? 'overflow-hidden' : 'overflow-visible'"
   >
     <!-- Header Start -->
@@ -29,13 +31,17 @@
               >Sinar Pagi</a
             >
           </div>
-          <div class="relative flex items-center px-4">
+          <div
+            class="relative flex items-center px-4"
+            @click.outside="openMenu = false"
+          >
             <button
               id="hamburger"
               name="hamburger"
               type="button"
               class="absolute right-4 z-20 block lg:hidden"
               @click="openMenu = !openMenu"
+              :class="openMenu ? 'hamburger-active':''"
             >
               <span
                 class="hamburger-line origin-top-left transition duration-300 ease-in-out"
@@ -90,40 +96,153 @@
               </ul>
             </nav>
           </div>
+          <!-- <div class="flex px-4">
+            <a
+              class="mx-2 flex py-2 text-base font-medium text-dark group-hover:text-primary"
+              href=""
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="mx-2 flex py-2 text-base font-medium text-dark group-hover:text-primary"
+              href=""
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                />
+              </svg>
+            </a>
+          </div> -->
         </div>
       </div>
     </header>
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pb-32 pt-36">
-      <div class="container">
-        <div
-          class="flex flex-col-reverse items-center gap-4 lg:flex-row lg:justify-center lg:gap-0"
-        >
+    <section
+      id="home"
+      class="pb-32 pt-36"
+      x-data="slides"
+      x-init="loop"
+      x-transition.opacity
+    >
+      <div class="container relative flex justify-center">
+        <template x-for="(item, index) in items" x-key="index">
           <div
-            class="flex w-full flex-col items-center px-4 text-center lg:w-1/2 lg:place-items-start lg:text-left"
+            class="flex flex-col-reverse items-center gap-4 lg:flex-row lg:flex-wrap lg:justify-center lg:gap-0"
           >
-            <h1 class="text-3xl font-bold text-dark lg:text-4xl">
-              UNIQUE JEWELRY, RARE GEMS, AND EXQUISITE PIECES!
-            </h1>
-            <p class="my-5 leading-relaxed">
-              Witness stunning detail of this collection and we will be right
-              back soon.
-            </p>
-            <a
-              href="#"
-              class="block rounded bg-primary px-8 py-4 text-base font-medium text-dark outline outline-1 outline-dark transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
-              >Shopping Now</a
+            <div
+              class="flex w-full flex-col items-center px-4 text-center lg:w-1/2 lg:place-items-start lg:text-left"
+              x-show="activeSlide === item.id"
             >
+              <h1
+                class="text-3xl font-bold text-dark lg:text-4xl"
+                x-text="item.title"
+              ></h1>
+              <p class="my-5 leading-relaxed" x-text="item.body"></p>
+              <a
+                href="#"
+                class="block rounded bg-primary px-8 py-4 text-base font-medium text-dark outline outline-1 outline-dark transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
+                >Shopping Now</a
+              >
+            </div>
+            <div
+              class="flex w-full px-4 lg:w-1/2 xl:pt-10"
+              x-show="activeSlide === item.id"
+            >
+              <img
+                :src="`dist/img/${item.img}`"
+                :alt="item.name"
+                class="mx-auto w-2/3 animate-bounce-slow md:w-1/2"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="flex w-full px-4 lg:w-1/2 xl:pt-10">
-            <img
-              src="dist/img/1.png"
-              class="mx-auto w-2/3 animate-bounce-slow md:w-1/2 lg:w-full"
-              alt=""
-            />
+        </template>
+
+        <!-- Back//Next -->
+        <div class="absolute inset-0 flex">
+          <div class="flex w-1/2 items-center justify-start">
+            <button
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 font-bold text-slate-500 shadow transition hover:bg-blue-500 hover:text-white"
+              @click="activeSlide = activeSlide === 1 ? items.length : activeSlide - 1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
           </div>
+          <div class="flex w-1/2 items-center justify-end">
+            <button
+              class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 font-bold text-slate-500 shadow transition hover:bg-blue-500 hover:text-white"
+              @click="activeSlide = activeSlide === items.length ? 1 : activeSlide + 1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+
+        <div
+          class="absolute inset-x-0 -bottom-14 flex w-full items-center justify-center"
+        >
+          <template x-for="(item, index) in items" x-key="index">
+            <button
+              class="mx-2 mb-2 mt-4 flex h-2 w-2 overflow-hidden rounded-full transition-colors duration-200 ease-out hover:bg-slate-600 hover:shadow-lg md:w-4 md:flex-1"
+              :class="{
+              'bg-blue-600': activeSlide === item.id,'bg-slate-300': activeSlide !== item.id
+              }"
+              @click="activeSlide = item.id"
+            ></button>
+          </template>
         </div>
       </div>
     </section>
@@ -202,8 +321,9 @@
           <div class="flex h-[400px] lg:w-1/2 lg:justify-center">
             <div class="relative flex items-center justify-center">
               <div
-                x-on:click="open = !open"
                 class="absolute h-fit w-[10rem] translate-x-[-50%] translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in md:translate-x-[-60%] lg:w-[11rem]"
+                @click="showCard = 1"
+                :class="showCard ? '':''"
               >
                 <img
                   class="h-[15rem] w-full object-cover lg:h-[16.5rem]"
@@ -216,6 +336,7 @@
               </div>
               <div
                 class="absolute z-10 h-fit w-[13rem] translate-x-0 translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in lg:w-[14rem]"
+                @click="showCard = 2"
               >
                 <img
                   class="h-[19.5rem] w-full object-cover lg:h-[21rem]"
@@ -228,6 +349,7 @@
               </div>
               <div
                 class="absolute h-fit w-[10rem] translate-x-[50%] translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in md:translate-x-[60%] lg:w-[11rem]"
+                @click="showCard = 3"
               >
                 <img
                   class="h-[15rem] w-full object-cover lg:h-[16.5rem]"
@@ -598,22 +720,20 @@
             <p>Singkawang</p>
           </div>
           <div class="mb-12 w-full px-4 md:w-1/4">
-            <h3 class="mb-5 text-xl font-semibold text-white">
-              Kategori Tulisan
-            </h3>
+            <h3 class="mb-5 text-xl font-semibold text-white">Kategori</h3>
             <ul class="text-slate-300">
               <li>
                 <a
                   href="#"
                   class="mb-3 inline-block text-base hover:text-primary"
-                  >Programming</a
+                  >Produk Baru</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="mb-3 inline-block text-base hover:text-primary"
-                  >Teknologi</a
+                  >Best Seller</a
                 >
               </li>
               <li>

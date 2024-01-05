@@ -11,8 +11,8 @@
 // };
 
 // Hamburger
-const hamburger = document.querySelector("#hamburger");
-const navMenu = document.querySelector("#nav-menu");
+// const hamburger = document.querySelector("#hamburger");
+// const navMenu = document.querySelector("#nav-menu");
 
 // const menuOpenBtn = document.querySelector(".menu-open-btn");
 // const menuCloseBtn = document.querySelector(".menu-close-btn");
@@ -28,7 +28,7 @@ const navMenu = document.querySelector("#nav-menu");
 //   offcanvasMenu.classList.add("translate-x-0");
 // });
 
-hamburger.addEventListener("click", function () {
-  hamburger.classList.toggle("hamburger-active");
-  // navMenu.classList.toggle("hidden");
-});
+// hamburger.addEventListener("click", function () {
+//   hamburger.classList.toggle("hamburger-active");
+// navMenu.classList.toggle("hidden");
+// });
