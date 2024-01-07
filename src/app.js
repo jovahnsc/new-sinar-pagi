@@ -50,7 +50,7 @@ document.addEventListener("alpine:init", () => {
     loop() {
       setInterval(() => {
         this.activeSlide = this.activeSlide === 5 ? 1 : this.activeSlide + 1;
-      }, 2000);
+      }, 8000);
     },
   }));
 });
