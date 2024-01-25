@@ -17,7 +17,6 @@
   </head>
   <body
     x-data="{openMenu : false}"
-    x-data="{showCard : 2}"
     :class="openMenu ? 'overflow-hidden' : 'overflow-visible'"
   >
     <!-- Header Start -->
@@ -297,7 +296,7 @@
     <!-- New Product Section End -->
 
     <!-- Best Seller Section Start -->
-    <section id="" class="py-20">
+    <section id="bestseller" class="py-20">
       <div class="container">
         <div class="flex flex-col items-center px-4 lg:flex-row">
           <div
@@ -319,11 +318,9 @@
           </div>
 
           <div class="flex h-[400px] lg:w-1/2 lg:justify-center">
-            <div class="relative flex items-center justify-center">
+            <div class="card relative flex items-center justify-center">
               <div
-                class="absolute h-fit w-[10rem] translate-x-[-50%] translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in md:translate-x-[-60%] lg:w-[11rem]"
-                @click="showCard = 1"
-                :class="showCard ? '':''"
+                class="cardOne absolute h-fit w-[10rem] translate-x-[-50%] translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in md:translate-x-[-60%] lg:w-[11rem]"
               >
                 <img
                   class="h-[15rem] w-full object-cover lg:h-[16.5rem]"
@@ -336,7 +333,6 @@
               </div>
               <div
                 class="absolute z-10 h-fit w-[13rem] translate-x-0 translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in lg:w-[14rem]"
-                @click="showCard = 2"
               >
                 <img
                   class="h-[19.5rem] w-full object-cover lg:h-[21rem]"
@@ -349,7 +345,6 @@
               </div>
               <div
                 class="absolute h-fit w-[10rem] translate-x-[50%] translate-y-0 cursor-pointer overflow-hidden rounded bg-white text-center shadow-lg transition-transform duration-500 ease-in md:translate-x-[60%] lg:w-[11rem]"
-                @click="showCard = 3"
               >
                 <img
                   class="h-[15rem] w-full object-cover lg:h-[16.5rem]"

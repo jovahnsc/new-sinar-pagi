@@ -63,3 +63,10 @@ const rupiah = (number) => {
     minimumFractionDigits: 0,
   }).format(number);
 };
+
+// Best Seller Clickable Card
+const cards = document.querySelectorAll(".card");
+// console.log(cards);
+cards.forEach(function (card) {
+  console.log(card);
+});
