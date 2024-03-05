@@ -14,5 +14,8 @@
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.3",
     "tailwindcss-3d": "^1.0.2"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001591"
   }
 }

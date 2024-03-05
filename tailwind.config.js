@@ -4,20 +4,38 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "16px",
+      padding: {
+        default: "1rem",
+        sm: "1.5rem",
+      },
     },
     extend: {
       colors: {
-        primary: "#F8F3E9",
-        dark: "#0f172a",
+        primaryColor: "#fffff0",
+        primaryColorLight: "#fff",
+        secondaryColor: "#dda15e",
+        paragraphColor: "c0c0c0",
+        whiteColor: "#fff",
+        blackColor: "#000",
+        greenColor: "#b3c186",
+        redColor: "#d16d38",
+        darkColor: "#000",
+        darkColorLight: "#171717",
         aspectRatio: {
           "9/16": "9 / 16",
         },
       },
+      keyframes: {
+        move: {
+          "50%": { transform: "translateY(-1rem)" },
+        },
+      },
       animation: {
         "bounce-slow": "bounce 4s linear infinite",
+        movingY: "move 4s linear infinite",
       },
       screens: {
+        sm: "480px",
         "2xl": "1320px",
       },
       backgroundImage: {

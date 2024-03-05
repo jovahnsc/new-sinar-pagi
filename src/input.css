@@ -2,9 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Inter", sans-serif;
+@layer base {
+  body {
+    @apply bg-primaryColor tracking-wider text-blackColor;
+    font-family: "Inter", sans-serif;
+  }
+
+  section {
+    @apply pb-4 pt-28 md:pt-32;
+  }
 }
+
+@layer components {
+  .btn {
+    @apply inline-block cursor-pointer rounded-md px-8 py-3 text-center text-sm capitalize duration-200 ease-linear;
+  }
+
+  .btn-primary {
+    @apply bg-secondaryColor font-medium text-whiteColor hover:opacity-75;
+  }
+}
+
+@layer utilities {
+  .home-title,
+  .about-title,
+  .section-title {
+    @apply text-4xl font-bold uppercase lg:text-6xl;
+  }
+
+  .about-title {
+    @apply text-3xl;
+  }
+
+  .section-title {
+    @apply text-3xl capitalize;
+  }
+
+  .separator {
+    @apply my-5 h-[2px] w-28 bg-secondaryColor;
+  }
+
+  .paragraph {
+    @apply text-sm font-light leading-relaxed text-paragraphColor;
+  }
+}
+
+/* body {
+  font-family: "Inter", sans-serif;
+} */
 
 /* .navbar-fixed {
   @apply fixed z-[9999] bg-white bg-opacity-70;
@@ -13,7 +58,7 @@ body {
 } */
 
 .hamburger-line {
-  @apply my-2 block h-[2px] w-[30px] bg-dark;
+  @apply my-2 block h-[2px] w-[30px] bg-blackColor;
 }
 
 .hamburger-active > span:nth-child(1) {
