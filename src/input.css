@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-primaryColor tracking-wider text-blackColor;
     font-family: "Inter", sans-serif;
