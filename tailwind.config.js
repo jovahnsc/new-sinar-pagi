@@ -35,7 +35,7 @@ module.exports = {
         movingY: "move 4s linear infinite",
       },
       screens: {
-        sm: "480px",
+        sm: "320px",
         "2xl": "1320px",
       },
       backgroundImage: {
