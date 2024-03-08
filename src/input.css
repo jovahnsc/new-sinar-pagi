@@ -14,6 +14,10 @@
   section {
     @apply pb-4 pt-28 md:pt-32;
   }
+
+  footer {
+    @apply text-primaryColorLight;
+  }
 }
 
 @layer components {
@@ -78,4 +82,8 @@
 
 [x-cloak] {
   display: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #dda15e !important;
 }
