@@ -64,7 +64,7 @@
             >
               <li>
                 <a
-                  class="mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
+                  class="nav-link mx-8 text-secondaryColor duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
                   href="#home"
                   @click="openMenu = false"
                   >Home</a
@@ -72,7 +72,7 @@
               </li>
               <li>
                 <a
-                  class="mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
+                  class="nav-link mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
                   href="#about"
                   @click="openMenu = false"
                   >About</a
@@ -80,7 +80,7 @@
               </li>
               <li>
                 <a
-                  class="mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
+                  class="nav-link mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
                   href="#category"
                   @click="openMenu = false"
                   >Category</a
@@ -88,7 +88,7 @@
               </li>
               <li>
                 <a
-                  class="mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
+                  class="nav-link mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
                   href="#review"
                   @click="openMenu = false"
                   >Review</a
@@ -96,7 +96,7 @@
               </li>
               <li>
                 <a
-                  class="mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
+                  class="nav-link mx-8 duration-200 ease-in hover:text-secondaryColor md:mx-0 lg:mx-4"
                   href="#contact"
                   @click="openMenu = false"
                   >Contact</a
@@ -135,7 +135,7 @@
     <!-- Header End -->
 
     <!-- Home Section Start -->
-    <section id="home" class="">
+    <section id="home">
       <div class="container">
         <div class="swiper swiper1 py-10">
           <div class="swiper-wrapper mb-10">
@@ -144,11 +144,15 @@
                 class="flex flex-col items-center gap-10 md:flex-row-reverse"
               >
                 <div class="mx-auto animate-movingY md:basis-1/3 lg:basis-2/5">
-                  <img src="dist/img/1.png" alt="" class="w-60 md:w-full" />
+                  <img
+                    src="dist/img/home/1.png"
+                    alt=""
+                    class="home-image w-60 md:w-full"
+                  />
                 </div>
 
                 <div
-                  class="text-center md:basis-2/3 md:text-start lg:basis-3/5"
+                  class="home-content text-center md:basis-2/3 md:text-start lg:basis-3/5"
                 >
                   <h1 class="home-title">
                     Beyond Sparkle: The Art of Adornment
@@ -175,7 +179,11 @@
                 class="flex flex-col items-center gap-10 md:flex-row-reverse"
               >
                 <div class="mx-auto animate-movingY md:basis-1/3 lg:basis-2/5">
-                  <img src="dist/img/2.png" alt="" class="w-60 md:w-full" />
+                  <img
+                    src="dist/img/home/2.png"
+                    alt=""
+                    class="w-60 md:w-full"
+                  />
                 </div>
 
                 <div
@@ -206,7 +214,11 @@
                 class="flex flex-col items-center gap-10 md:flex-row-reverse"
               >
                 <div class="mx-auto animate-movingY md:basis-1/3 lg:basis-2/5">
-                  <img src="dist/img/3.png" alt="" class="w-60 md:w-full" />
+                  <img
+                    src="dist/img/home/3.png"
+                    alt=""
+                    class="w-60 md:w-full"
+                  />
                 </div>
 
                 <div
@@ -240,9 +252,9 @@
     <!-- Home Section End -->
 
     <!-- New Product Section Start -->
-    <section id="" class="">
+    <section id="newproduct">
       <div class="container">
-        <div class="w-full px-4">
+        <div class="new-content w-full px-4">
           <div class="mx-auto rounded-lg text-center">
             <h4 class="font-medium leading-relaxed">CHANGE IS ESSENTIAL</h4>
             <h1 class="text-dark text-3xl font-bold md:text-4xl">
@@ -258,26 +270,26 @@
 
         <div class="mb-14 flex items-center justify-center px-4 md:gap-2">
           <div
-            class="hidden md:flex md:w-2/5 md:flex-col md:flex-wrap md:content-end md:gap-2"
+            class="new-image-left hidden md:flex md:w-2/5 md:flex-col md:flex-wrap md:content-end md:gap-2"
           >
             <img
-              src="https://source.unsplash.com/640x640?necklace"
+              src="dist/img/new/small-top.jpg"
               alt=""
               class="aspect-square rounded-lg object-cover md:w-[10.625rem] lg:w-[14.75rem]"
               loading="lazy"
             />
             <img
-              src="https://source.unsplash.com/640x640?earrings"
+              src="dist/img/new/small-bottom.jpg"
               alt=""
               class="aspect-square rounded-lg object-cover md:w-[10.625rem] lg:w-[14.75rem]"
               loading="lazy"
             />
           </div>
           <div
-            class="flex w-full justify-center overflow-hidden md:w-3/5 md:justify-start"
+            class="new-image-right flex w-full justify-center overflow-hidden md:w-3/5 md:justify-start"
           >
             <img
-              src="https://source.unsplash.com/640x640?ring"
+              src="dist/img/new/big.jpg"
               alt=""
               class="aspect-square w-60 rounded-lg object-cover md:w-[21.75rem] lg:w-[30rem]"
               loading="lazy"
@@ -289,17 +301,17 @@
     <!-- New Product Section End -->
 
     <!-- Best Seller Section Start -->
-    <section id="bestseller" class="">
+    <section id="bestseller">
       <div class="container">
         <div class="flex flex-col items-center px-4 md:flex-row">
           <div
-            class="flex flex-col items-center rounded-md text-center md:w-1/2"
+            class="bestseller-left flex flex-col items-center rounded-md text-center md:w-1/2"
           >
             <h1 class="text-dark text-3xl font-bold md:text-4xl">
               Best Seller Product
             </h1>
             <div class="separator mx-auto md:mx-0"></div>
-            <p class="paragraph mb-2 md:mb-12 md:px-6">
+            <p class="paragraph mb-2 md:mb-6 md:px-6">
               Transform your jewelry collection with our Fairy Box trinkets, a
               collection of hand-carved natural stone charms that you can add on
               to bracelets, necklaces, hoops, and more.
@@ -313,13 +325,22 @@
           </div>
 
           <div class="swiper swiper2 h-80 w-60 py-10">
-            <div class="swiper-wrapper mb-10">
-              <div
-                class="swiper-slide rounded-lg bg-[url('https://source.unsplash.com/240x320?rings')] object-cover shadow-lg"
-              ></div>
-              <div
-                class="swiper-slide rounded-lg bg-[url('https://source.unsplash.com/240x320?bracelet')] object-cover shadow-lg"
-              ></div>
+            <div class="swiper-wrapper bestseller-right mb-10">
+              <img
+                src="dist/img/bestseller/1.jpg"
+                alt=""
+                class="swiper-slide rounded-lg object-cover shadow-lg"
+              />
+              <img
+                src="dist/img/bestseller/2.jpg"
+                alt=""
+                class="swiper-slide rounded-lg object-cover shadow-lg"
+              />
+              <img
+                src="dist/img/bestseller/3.jpg"
+                alt=""
+                class="swiper-slide rounded-lg object-cover shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -328,7 +349,7 @@
     <!-- Best Seller Section End -->
 
     <!-- Category Section Start -->
-    <section id="category" class="">
+    <section id="category" class="category">
       <div class="container">
         <div class="w-full">
           <div class="mx-auto mb-10 text-center">
@@ -343,86 +364,92 @@
           class="mb-10 flex flex-wrap content-evenly justify-center gap-4 md:content-center md:gap-6 lg:gap-6 lg:px-12 xl:px-52"
         >
           <a class="relative aspect-square w-32 md:w-52 xl:w-64" href="">
-            <div
-              class="absolute h-full w-full rounded-xl bg-[url('https://source.unsplash.com/640x640?rings')] bg-cover bg-center shadow-lg"
-            >
-              <div class="absolute inset-x-0 bottom-4 px-6">
-                <h3
-                  class="text-md block text-center font-semibold text-whiteColor antialiased"
-                >
-                  Rings
-                </h3>
-              </div>
+            <img
+              class="absolute h-full w-full rounded-xl bg-cover bg-center shadow-lg"
+              src="dist/img/category/rings.jpg"
+              alt=""
+            />
+            <div class="absolute inset-x-0 bottom-4 px-6">
+              <h3
+                class="text-md block text-center font-semibold text-whiteColor antialiased"
+              >
+                Rings
+              </h3>
             </div>
           </a>
 
           <a class="relative aspect-square w-32 md:w-52 xl:w-64" href="">
-            <div
-              class="absolute h-full w-full rounded-xl bg-[url('https://source.unsplash.com/640x640?bracelet')] bg-cover bg-center shadow-lg"
-            >
-              <div class="absolute inset-x-0 bottom-4 px-6">
-                <h3
-                  class="text-md block text-center font-semibold text-whiteColor antialiased"
-                >
-                  Bracelet
-                </h3>
-              </div>
+            <img
+              class="absolute h-full w-full rounded-xl bg-cover bg-center shadow-lg"
+              src="dist/img/category/bracelet.jpg"
+              alt=""
+            />
+            <div class="absolute inset-x-0 bottom-4 px-6">
+              <h3
+                class="text-md block text-center font-semibold text-whiteColor antialiased"
+              >
+                Bracelet
+              </h3>
             </div>
           </a>
 
           <a class="relative aspect-square w-32 md:w-52 xl:w-64" href="">
-            <div
-              class="absolute h-full w-full rounded-xl bg-[url('https://source.unsplash.com/640x640?earrings')] bg-cover bg-center shadow-lg"
-            >
-              <div class="absolute inset-x-0 bottom-4 px-6">
-                <h3
-                  class="text-md block text-center font-semibold text-whiteColor antialiased"
-                >
-                  Earrings
-                </h3>
-              </div>
+            <img
+              class="absolute h-full w-full rounded-xl bg-cover bg-center shadow-lg"
+              src="dist/img/category/earrings.jpg"
+              alt=""
+            />
+            <div class="absolute inset-x-0 bottom-4 px-6">
+              <h3
+                class="text-md block text-center font-semibold text-whiteColor antialiased"
+              >
+                Earrings
+              </h3>
             </div>
           </a>
 
           <a class="relative aspect-square w-32 md:w-52 xl:w-64" href="">
-            <div
-              class="absolute h-full w-full rounded-xl bg-[url('https://source.unsplash.com/640x640?necklace')] bg-cover bg-center shadow-lg"
-            >
-              <div class="absolute inset-x-0 bottom-4 px-6">
-                <h3
-                  class="text-md block text-center font-semibold text-whiteColor antialiased"
-                >
-                  Necklace
-                </h3>
-              </div>
+            <img
+              class="absolute h-full w-full rounded-xl bg-cover bg-center shadow-lg"
+              src="dist/img/category/necklace.jpg"
+              alt=""
+            />
+            <div class="absolute inset-x-0 bottom-4 px-6">
+              <h3
+                class="text-md block text-center font-semibold text-whiteColor antialiased"
+              >
+                Necklace
+              </h3>
             </div>
           </a>
 
           <a class="relative aspect-square w-32 md:w-52 xl:w-64" href="">
-            <div
-              class="absolute h-full w-full rounded-xl bg-[url('https://source.unsplash.com/640x640?hairclip')] bg-cover bg-center shadow-lg"
-            >
-              <div class="absolute inset-x-0 bottom-4 px-6">
-                <h3
-                  class="text-md block text-center font-semibold text-whiteColor antialiased"
-                >
-                  Hairclip
-                </h3>
-              </div>
+            <img
+              class="absolute h-full w-full rounded-xl bg-cover bg-center shadow-lg"
+              src="dist/img/category/hairclip.jpg"
+              alt=""
+            />
+            <div class="absolute inset-x-0 bottom-4 px-6">
+              <h3
+                class="text-md block text-center font-semibold text-whiteColor antialiased"
+              >
+                Hairclip
+              </h3>
             </div>
           </a>
 
           <a class="relative aspect-square w-32 md:w-52 xl:w-64" href="">
-            <div
-              class="absolute h-full w-full rounded-xl bg-[url('https://source.unsplash.com/640x640?pendant')] bg-cover bg-center shadow-lg"
-            >
-              <div class="absolute inset-x-0 bottom-4 px-6">
-                <h3
-                  class="text-md block text-center font-semibold text-whiteColor antialiased"
-                >
-                  Pendant
-                </h3>
-              </div>
+            <img
+              class="absolute h-full w-full rounded-xl bg-cover bg-center shadow-lg"
+              src="dist/img/category/pendant.jpg"
+              alt=""
+            />
+            <div class="absolute inset-x-0 bottom-4 px-6">
+              <h3
+                class="text-md block text-center font-semibold text-whiteColor antialiased"
+              >
+                Pendant
+              </h3>
             </div>
           </a>
         </div>
@@ -431,7 +458,7 @@
     <!-- Category Section End -->
 
     <!-- Review Section Start -->
-    <section id="review" class="">
+    <section id="review" class="review">
       <div class="container">
         <div class="mx-auto mb-5 max-w-md text-center">
           <h2 class="section-title">Review</h2>
@@ -580,7 +607,7 @@
     <!-- Review Section End -->
 
     <!-- Instagram Section Start -->
-    <section id="instagram" class="">
+    <section id="instagram">
       <div class="container">
         <div
           class="flex flex-wrap content-evenly justify-center gap-4 md:content-center md:gap-6 lg:px-14"
@@ -642,11 +669,11 @@
     <!-- Instagram Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="">
+    <section id="about">
       <div
         class="container flex w-full flex-col items-center gap-10 md:flex-row"
       >
-        <div class="flex-1 md:text-end">
+        <div class="about-left flex-1 md:text-end">
           <img
             src="https://source.unsplash.com/960x960?jewelry"
             alt=""
@@ -654,7 +681,7 @@
           />
         </div>
 
-        <div class="flex-1 text-center md:text-start">
+        <div class="about-right flex-1 text-center md:text-start">
           <h2 class="about-title">HANDCRAFTED IN SINGKAWANG</h2>
           <div class="separator mx-auto md:mx-0"></div>
           <p class="paragraph pb-5">
@@ -676,7 +703,7 @@
     <!-- About Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="bg-secondaryColor py-16">
+    <section id="contact" class="bg-secondaryColor pb-24 pt-24">
       <div class="container flex flex-col gap-5 md:flex-row md:items-center">
         <div class="space-y-4 md:flex-1">
           <h2 class="section-title text-whiteColor dark:text-darkColor">
@@ -837,9 +864,8 @@
     </a>
     <!-- Back to top End -->
 
-    <!-- Javascript -->
-    <script src="src/app.js"></script>
-    <script src="dist/js/script.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -889,5 +915,8 @@
         },
       });
     </script>
+    <!-- My Javascript -->
+    <script src="src/app.js"></script>
+    <script src="dist/js/script.js"></script>
   </body>
 </html>

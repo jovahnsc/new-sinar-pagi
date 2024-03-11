@@ -990,14 +990,6 @@ footer {
   --tw-bg-opacity: 0.7;
 }
 
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/240x320\?bracelet\'\)\] {
-  background-image: url('https://source.unsplash.com/240x320?bracelet');
-}
-
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/240x320\?rings\'\)\] {
-  background-image: url('https://source.unsplash.com/240x320?rings');
-}
-
 .bg-\[url\(\'https\:\/\/source\.unsplash\.com\/640x640\?bangel\'\)\] {
   background-image: url('https://source.unsplash.com/640x640?bangel');
 }
@@ -1014,10 +1006,6 @@ footer {
   background-image: url('https://source.unsplash.com/640x640?gold+ring');
 }
 
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/640x640\?hairclip\'\)\] {
-  background-image: url('https://source.unsplash.com/640x640?hairclip');
-}
-
 .bg-\[url\(\'https\:\/\/source\.unsplash\.com\/640x640\?jewellry\'\)\] {
   background-image: url('https://source.unsplash.com/640x640?jewellry');
 }
@@ -1026,16 +1014,8 @@ footer {
   background-image: url('https://source.unsplash.com/640x640?necklace');
 }
 
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/640x640\?pendant\'\)\] {
-  background-image: url('https://source.unsplash.com/640x640?pendant');
-}
-
 .bg-\[url\(\'https\:\/\/source\.unsplash\.com\/640x640\?ring\'\)\] {
   background-image: url('https://source.unsplash.com/640x640?ring');
-}
-
-.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/640x640\?rings\'\)\] {
-  background-image: url('https://source.unsplash.com/640x640?rings');
 }
 
 .bg-cover {
@@ -1074,11 +1054,6 @@ footer {
   padding-bottom: 2.5rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1099,8 +1074,16 @@ footer {
   padding-bottom: 1.5rem;
 }
 
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .text-center {
@@ -1400,8 +1383,8 @@ footer {
     margin-right: 0px;
   }
 
-  .md\:mb-12 {
-    margin-bottom: 3rem;
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .md\:ml-auto {
@@ -1526,10 +1509,6 @@ footer {
     background-color: inherit;
   }
 
-  .md\:bg-opacity-70 {
-    --tw-bg-opacity: 0.7;
-  }
-
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1565,10 +1544,6 @@ footer {
 
   :is(.dark .dark\:md\:bg-inherit) {
     background-color: inherit;
-  }
-
-  :is(.dark .dark\:md\:bg-opacity-30) {
-    --tw-bg-opacity: 0.3;
   }
 }
 
