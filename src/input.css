@@ -7,7 +7,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-primaryColor tracking-wider text-blackColor;
+    @apply bg-primaryColor tracking-wider text-blackColor dark:bg-darkColor dark:text-whiteColor;
     font-family: "Inter", sans-serif;
   }
 
@@ -26,7 +26,7 @@
   }
 
   .btn-primary {
-    @apply bg-secondaryColor font-medium text-whiteColor hover:opacity-75;
+    @apply bg-secondaryColor font-medium text-whiteColor hover:opacity-75 dark:text-darkColor;
   }
 }
 
@@ -65,7 +65,7 @@
 } */
 
 .hamburger-line {
-  @apply my-2 block h-[2px] w-[30px] bg-blackColor;
+  @apply my-2 block h-[2px] w-[30px] bg-blackColor dark:bg-whiteColor;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -85,5 +85,9 @@
 }
 
 .swiper-pagination-bullet-active {
+  background-color: #dda15e !important;
+}
+
+.swiper-pagination-bullet {
   background-color: #dda15e !important;
 }
